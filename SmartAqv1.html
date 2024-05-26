@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fish Feeder</title>
+</head>
+<body>
+    <link rel="stylesheet" href="style.css">
+  <!-- Include the Firebase SDK version 8 -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <!-- <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script> -->
+  <!-- Your time picker and other HTML content -->
+  <div class="datetimepicker">
+    <div class="time-picker">
+      <input type="time" id="time1" value="08:00">
+      <label for="time1">Time 1</label>
+      <button class="remove-time" aria-label="Remove time">-</button>
+    </div>
+    <button class="add-time" aria-label="Add time">+</button>
+  </div>
+  <button class="submit-button" aria-label="Submit times">Submit</button>
+  <div class="info">
+    <strong>Set times for fish feeder:</strong>
+    <ul id="time-list"></ul>
+  </div>
+
+  <!-- Your Servo control buttons -->
+  <button id="turnOnServo">Click to turn on</button>
+  <button id="turnOffServo">Click to turn off</button>
+
+  <!-- Your existing script files -->
+  <script type="module" src="index.js"></script>
+</body>
+</html>

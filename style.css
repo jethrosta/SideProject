@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+    font-size: xx-large;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    color: #555;
+    background-color: lightseagreen;
+  }
+  
+  .datetimepicker {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #fff;
+    border: 4px solid darkturquoise;
+    border-radius: 8px;
+    padding: 0.1rem;
+    width: 100%;
+    max-width: 600px;
+  
+    &:focus-within {
+      border-color: teal;
+    }
+  
+    .time-picker {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      max-width: 60%;
+      margin: 0.6rem 0;
+  
+      input {
+        font: inherit;
+        color: inherit;
+        appearance: none;
+        outline: none;
+        border: 0;
+        background-color: transparent;
+        width: 100%;
+        padding: 0.5rem;
+  
+        &[type=time] {
+          width: 5.5rem;
+          border-left-width: 0;
+          padding: 0.1rem; /* Decrease padding */
+            width: calc(110% - 2rem); /* Increase width */
+        }
+      }
+  
+      label {
+        margin-left: 0.5rem;
+        font-size: 0.8rem;
+        width: 40%;
+      }
+  
+      .remove-time {
+        margin-left: 0.5rem;
+        font-size: 1.2rem;
+        cursor: pointer;
+      }
+    }
+  
+    .add-time {
+      font-size: 1.2rem;
+      cursor: pointer;
+      margin: 0.5rem;
+    }
+  }
+  
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: .5rem;
+    font-size: .8rem;
+    color: rgba(255, 255, 255, .5);
+  }
+  
+  @media (max-width: 600px) {
+    .datetimepicker {
+      .time-picker {
+        max-width: 100%;
+      }
+    }
+  }
